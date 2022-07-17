@@ -1,0 +1,60 @@
+﻿@model Assignment_2.Models.Fighters
+@*This tells the application that we need to focus on the Item model*@
+
+<form method="post" asp-action="Create">
+    <div class="border p-3">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group row">
+            <h2 class="text-black-50 pl-3">Add Benders</h2>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="BenderName"></label>@*These names come from our properties in the model *@
+                    </div>
+                    <div class="col-4">
+                        <input asp-for="BenderName" class="form-control" />
+                        <span asp-validation-for="BenderName" class="text-danger"></span>
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="City"></label>
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="Weapon"></label>
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="FightingStyle"></label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    
+                    <div class="col-4">
+                        <input asp-for="City" class="form-control" />
+                        <span asp-validation-for="City" class="text-danger"></span>
+                    </div>
+                    <div class="col-4">
+                        <input asp-for="Weapon" class="form-control" />
+                        <span asp-validation-for="Weapon" class="text-danger"></span>
+                    </div>
+                    <div class="col-4">
+                        <input asp-for="FightingStyle" class="form-control" />
+                        <span asp-validation-for="FightingStyle" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-8 offset-2 row">
+                        <div class="col">
+                            <input type="submit" class="btn btn-info w-75" value="Create" />
+                        </div>
+                        <div class="col">
+                            <a asp-action="Fighters" class="btn btn-danger w-75">Back</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
+

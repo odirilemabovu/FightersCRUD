@@ -1,0 +1,80 @@
+﻿@model Assignment_2.Models.Fighters
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='/Assets/text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="/Assets/css/style.css">
+
+	</head>
+	<body>
+		<div class="row pt-4">
+				<div style="color: black" class="col-12">
+				 <h2 class="text-dark">Add Characters </h2>
+			    </div>
+		</div>
+		<div class="container p-3">
+			<div class="wrapper img" style="background-image: url('/Assets/images/Avatar4.jpg');">
+			
+				<div class="row justify-content-center"
+					<div class="col-lg-10">					
+							<div class="row">		
+								<div class="col-md-9 col-lg-7">
+									<div class="contact-wrap w-100 p-md-5 p-4">									
+										<form method="post" asp-action="Create" id="contactForm" name="contactForm" class="contactForm">
+											<div class="row">
+												<div class="col-md-12">
+													<div class="form-group">
+														 <label asp-for="BenderName"></label>
+														<input asp-for="BenderName" class="form-control" id="name" placeholder="Bender Name" />
+													</div>
+												</div>
+												<div class="col-md-12"> 
+													<div class="form-group">
+														<label asp-for="City"></label>
+														<input asp-for="City" class="form-control" class="form-control" id="email" placeholder="City" />
+													</div>
+												</div>
+												<div class="col-md-12">
+													<div class="form-group">
+														<label asp-for="Weapon"></label>
+														<input asp-for="Weapon" class="form-control" class="form-control" id="subject" placeholder="Weapon" />
+													</div>
+												</div>
+												<div class="col-md-12">
+													<div class="form-group">
+														<label asp-for="FightingStyle"></label>
+														<input asp-for="FightingStyle" class="form-control" id="message" placeholder="Fighting Style" />
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<input type="submit" class="btn btn-info w-75" value="Add" />
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+			</div>
+		</div>
+
+	<script src="/Assetsjs/jquery.min.js"></script>
+  <script src="/Assetsjs/popper.js"></script>
+  <script src="/Assetsjs/bootstrap.min.js"></script>
+  <script src="/Assetsjs/jquery.validate.min.js"></script>
+  <script src="/Assetsjs/main.js"></script>
+
+	</body>
+</html>
+

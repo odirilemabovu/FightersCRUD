@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Assignment_2.Models.Fighters>
+
+    <div class="row pt-4">
+        <div style="color: black" class="col-6">
+            <h2 class="text-dark">Avatar Characters </h2>
+        </div>
+    </div>
+<div class="container p-3">
+    <div class="wrapper img" style="background-image: url('/Assets/images/Avatar5.jpg');">
+    <br />
+
+    @if (Model.Count() > 0)
+    {
+        <table class="table table-bordered" style="table-layout: fixed ; width: 100%">
+            <thead>                    
+                <tr>
+                    <th>
+                        Fighter ID
+                    </th>
+                    <th>
+                        Bender Name
+                    </th>
+                    <th>
+                        City
+                    </th>
+                    <th>
+                        Weapon
+                    </th>
+                    <th>
+                        Fighting Style
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var Fighters in Model)
+                {
+                    <tr>
+                        <td width="30%">@Fighters.FightersID</td>
+                        <td width="30%">@Fighters.BenderName</td>
+                        <td width="30%">@Fighters.City</td>
+                        <td width="30%">@Fighters.Weapon</td>
+                        <td width="30%">@Fighters.FightingStyle</td>
+                        <td width="30%">
+                            <div class="w-100 btn-group" role="group">
+                                <a asp-controller="Fighter" asp-action="Update" asp-route-ID="@Fighters.FightersID" class="btn btn-info w-75">Update</a>
+      
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No Items created yet</p>
+    }
+    </div>
+</div>
